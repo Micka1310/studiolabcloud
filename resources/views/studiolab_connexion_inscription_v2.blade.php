@@ -154,7 +154,7 @@
                     <h3 id="h_inscription_2">StudiolabCloud</h4>
 
                     <!-- Création du formulaire d'inscription -->
-                    <form action="inscription" method="POST">
+                    <form action="{{route('inscription')}}" method="POST">
 
                         @csrf
 

@@ -51,15 +51,15 @@ class authentification extends Controller
     {
         // On indique que l'email et le mdp sont indispensable pour valider
         $request->validate([
-            'nom'=>'required',
             'prenom'=>'required',
+            'nom'=>'required',
             'email'=> 'required|email|unique:users', // "|email" indique de vérifier si c'est bien un email. Par exemple de type ".com"
             'password'=>'required'
         ]);
 
         // Pour créer le nouvel utilisateur dans la base de donnée
-        $data['nom']=$request->nom;
         $data['prenom']=$request->prenom;
+        $data['nom']=$request->nom;
         $data['email']=$request->email;
         $data['password']=Hash::make($request->password);   // On crypte le mdp
         $user=User::create($data);  // On créer la base de donnée dans la table
