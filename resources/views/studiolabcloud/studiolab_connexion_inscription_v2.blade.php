@@ -16,7 +16,7 @@
     <meta name="mot_clé" content="HTML, CSS, JavaScript">
     <meta name="description" content="Page de connexion/inscription">
     <meta name="auteur" content="King Mickaël">
-    <meta name="date_de_mise_a_jour" content="11/07/2024">
+    <meta name="date_de_mise_a_jour" content="12/07/2024">
 
     <!-- Titre de l'onglet -->
     <title>Studiolab cloud | authentification</title>
@@ -49,16 +49,16 @@
             <br>
 
 
-            <!-- Forme qui cache l'arrière plan -->
-            <svg xmlns="http://www.w3.org/2000/svg" id="vision_forme_1" width="1520" height="800" >
+            <!-- Forme blanche qui cache l'arrière plan -->
+            <svg xmlns="http://www.w3.org/2000/svg" id="vision_forme_1" width="1520" height="900" >
 
                 <path
                 d=
                 "
                 M 0 0
                 L 1520 60
-                L 1520 710.8
-                L 0 710.8
+                L 1520 900
+                L 0 900
                 Z
                 "
                 fill="white" stroke="black" stroke-width="0"/>
@@ -109,7 +109,7 @@
                         <!-- champ de texte à remplir -->
                         <div id="connexion_e-mail_1">
 
-                            <img id="img_connexion_e-mail_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage">
+                            <img id="img_connexion_e-mail_1" height="25px" src="{{ asset('build/images/authentification/baseline-person_outline-1.png') }}" alt="image de personnage">
                             <input id="connexion_e-mail_2" type="email" name="email" placeholder="Identifiant ou addresse email" required>
 
                         </div>
@@ -117,9 +117,9 @@
 
                         <div id="connexion_mdp_1">
 
-                            <img id="img_connexion_mdp_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
+                            <img id="img_connexion_mdp_1" height="25px" src="{{ asset('build/images/authentification/outline-vpn_key-1.png') }}" alt="image de clé">
                             <input id="connexion_mdp_2" type="password" name="password" placeholder="Mot de passe" required>
-                            <img id="img_connexion_mdp_2" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'oeil barré">
+                            <img id="img_connexion_mdp_2" height="25px" src="{{ asset('build/images/authentification/outline-visibility_off-24px.png') }}" alt="image d'oeil barré">
 
                         </div>
 
@@ -140,7 +140,7 @@
                         <div id="connexion_flex_1">
 
                             <!-- paragraphe -->
-                            <img id="img_connexion_info_client" height="20px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de loupe">
+                            <img id="img_connexion_info_client" height="20px" src="{{ asset('build/images/authentification/icon_search.png') }}" alt="image de loupe">
                             <span id="p_connexion">Tout savoir sur l'Identifiant client</span>
 
                         </div>
@@ -166,47 +166,56 @@
 
                         <div id="inscription_prenom_1">
 
-                            <img id="img_prenom" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage">
+                            <img id="img_prenom" height="25px" src="{{ asset('build/images/authentification/baseline-person_outline-24px.png') }}" alt="image de personnage">
                             <input id="inscription_prenom_2" type="text" name="prenom" placeholder="Prénom" required>
 
                         </div>
 
                         <div id="inscription_nom_1">
 
-                            <img id="img_nom" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage_2">
+                            <img id="img_nom" height="25px" src="{{ asset('build/images/authentification/baseline-person_outline-24px.png') }}" alt="image de personnage_2">
                             <input id="inscription_nom_2" type="text" name="nom" placeholder="Nom" required>
 
                         </div>
 
                         <div id="inscription_e-mail_1">
 
-                            <img id="img_e-mail" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'enveloppe">
+                            <img id="img_e-mail" height="25px" src="{{ asset('build/images/authentification/baseline-mail_outline-24px.png') }}" alt="image d'enveloppe">
                             <input id="inscription_e-mail_2" type="email" name="email" placeholder="Adresse E-mail" required>
 
                         </div>
 
                         <div id="inscription_mdp_1">
 
-                            <img id="img_mdp_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
+                            <img id="img_mdp_1" height="25px" src="{{ asset('build/images/authentification/outline-vpn_key-24px.png') }}" alt="image de clé">
                             <input id="inscription_mdp_2" type="password" name="password" placeholder="Mot de passe" required>
-                            <img id="img_mdp_2" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'oeil barré">
+                            <img id="img_mdp_2" height="25px" src="{{ asset('build/images/authentification/outline-visibility_off-1.png') }}" alt="image d'oeil barré">
 
                         </div>
 
-                        <div id="inscription_mdp_confirm_1">
-                            <img id="img_mdp_confirm_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
-                            <input id="inscription_mdp_confirm_2" type="password" name="password_confirmation" placeholder="Confirmer le mot de passe" required>
+                        <div id="inscription_mdp_comfirm_1">
+
+                            <img id="img_mdp_comfirm_1" height="25px" src="{{ asset('build/images/authentification/outline-vpn_key-24px.png') }}" alt="image de clé">
+                            <input id="inscription_mdp_comfirm_2" type="password" name="password_confirmation" placeholder="Confirmer le mot de passe" required>
+                            <img id="img_mdp_comfirm_2" height="25px" src="{{ asset('build/images/authentification/outline-visibility_off-1.png') }}" alt="image d'oeil barré">
+
                         </div>
+
+                        <br>
+                        <br>
 
                         <!-- paragraphe -->
-                        <input type="checkbox" name="age_confirmation">
-                        <label id="p_inscription_1">
+                        <input type="checkbox" id="checkbox_1" name="age_confirmation">
+                        <label id="inscription_1">
 
-                            Je comfirme avoir plus de 18 ans et accepte
+                            Je comfirme avoir plus de 18 ans
+                            <br><div id="inscription_2"> et accepte
                             <a href="studiolab_accueil_v2.css"> les conditions générales de service
-                            StudiolabCloud</a>
+                            StudiolabCloud</a></div>
 
                         </label>
+
+                        <br>
 
                         <!--
                         <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
