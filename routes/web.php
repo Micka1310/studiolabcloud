@@ -8,12 +8,18 @@ use App\Http\Controllers\accueil;
 
 
 
-// URL menant à l'accueil
+// Route menant à l'accueil
 Route::get('/', function ()
 {
     return view('studiolabcloud/studiolab_accueil_v3');
     //return view('studiolabcloud/welcome');
 });
+
+// Route menant vers le tableau de bord
+Route::get('/tableau_bord_client', function()
+{
+    return view('studiolabcloud/tableau_bord_client');
+})->name('tableau_bord_client');
 
 /*
 Route::get('/accueil', [accueil::class, 'accueil'])->name('accueil');
@@ -29,7 +35,7 @@ Route::post('/connexion', [authentification::class, 'connexion'])->name('connexi
 
 
 Route::get('/dashboard', function () {
-    return view('studiolabcloud/dashboard');
+    return view('studiolabcloud/tableau_bord_principal');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
