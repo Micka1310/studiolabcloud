@@ -16,14 +16,18 @@
     <meta name="mot_clé" content="HTML, CSS, JavaScript">
     <meta name="description" content="Page de connexion/inscription">
     <meta name="auteur" content="King Mickaël">
-    <meta name="date_de_mise_a_jour" content="11/06/2024">
+    <meta name="date_de_mise_a_jour" content="11/07/2024">
 
     <!-- Titre de l'onglet -->
     <title>Studiolab cloud | authentification</title>
 
     <!-- Lien CSS et JavaScript -->
     @vite(['resources/css/studiolab_connexion_inscription_v2.css', 'resources/js/app.js'])
+    <!--<script src="https://www.google.com/recaptcha/api.js"></script>-->
+    <!--<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>-->
 
+    <!-- Pour le captcha -->
+    {!!htmlScriptTagJsApi()!!}
 
 </head>
 
@@ -95,7 +99,7 @@
                 <div id="forme_connexion_invisible">
 
                     <!-- Création du formulaire de connexion -->
-                    <form action="{{route('connexion')}}" method="POST">
+                    <form action="{{route('login.post')}}" method="POST">
 
                         @csrf
 
@@ -106,7 +110,7 @@
                         <div id="connexion_e-mail_1">
 
                             <img id="img_connexion_e-mail_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage">
-                            <input id="connexion_e-mail_2" type="email" name="email" placeholder="Identifiant ou addresse email">
+                            <input id="connexion_e-mail_2" type="email" name="email" placeholder="Identifiant ou addresse email" required>
 
                         </div>
 
@@ -114,7 +118,7 @@
                         <div id="connexion_mdp_1">
 
                             <img id="img_connexion_mdp_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
-                            <input id="connexion_mdp_2" type="password" name="password" placeholder="Mot de passe">
+                            <input id="connexion_mdp_2" type="password" name="password" placeholder="Mot de passe" required>
                             <img id="img_connexion_mdp_2" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'oeil barré">
 
                         </div>
@@ -154,7 +158,7 @@
                     <h3 id="h_inscription_2">StudiolabCloud</h4>
 
                     <!-- Création du formulaire d'inscription -->
-                    <form action="{{route('inscription')}}" method="POST">
+                    <form action="{{route('register.post')}}" method="POST" id="formulaire_inscription">
 
                         @csrf
 
@@ -163,47 +167,115 @@
                         <div id="inscription_prenom_1">
 
                             <img id="img_prenom" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage">
-                            <input id="inscription_prenom_2" type="text" name="prenom" placeholder="Prénom">
+                            <input id="inscription_prenom_2" type="text" name="prenom" placeholder="Prénom" required>
 
                         </div>
 
                         <div id="inscription_nom_1">
 
                             <img id="img_nom" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de personnage_2">
-                            <input id="inscription_nom_2" type="text" name="nom" placeholder="Nom">
+                            <input id="inscription_nom_2" type="text" name="nom" placeholder="Nom" required>
 
                         </div>
 
                         <div id="inscription_e-mail_1">
 
                             <img id="img_e-mail" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'enveloppe">
-                            <input id="inscription_e-mail_2" type="email" name="email" placeholder="Adresse E-mail">
+                            <input id="inscription_e-mail_2" type="email" name="email" placeholder="Adresse E-mail" required>
 
                         </div>
 
                         <div id="inscription_mdp_1">
 
                             <img id="img_mdp_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
-                            <input id="inscription_mdp_2" type="password" name="password" placeholder="Mot de passe">
+                            <input id="inscription_mdp_2" type="password" name="password" placeholder="Mot de passe" required>
                             <img id="img_mdp_2" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image d'oeil barré">
 
                         </div>
 
-                        <!-- bouton inscription -->
-                        <input id="bouton_inscription" type="submit" value="inscription">
+                        <div id="inscription_mdp_confirm_1">
+                            <img id="img_mdp_confirm_1" height="25px" src="{{ asset('build/images/authentification/test_patate.jpeg') }}" alt="image de clé">
+                            <input id="inscription_mdp_confirm_2" type="password" name="password_confirmation" placeholder="Confirmer le mot de passe" required>
+                        </div>
+
+                        <!-- paragraphe -->
+                        <input type="checkbox" name="age_confirmation">
+                        <label id="p_inscription_1">
+
+                            Je comfirme avoir plus de 18 ans et accepte
+                            <a href="studiolab_accueil_v2.css"> les conditions générales de service
+                            StudiolabCloud</a>
+
+                        </label>
+
+                        <!--
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                        -->
+                        <!-- Bouton inscription -->
+                        <!--
+                        <button type="submit" id="bouton_inscription">Inscription</button>
+                        -->
+<!--
+                        <script>
+
+                            function onSubmit(token)
+                            {
+                              document.getElementById("formulaire_inscription").submit();
+                            }
+
+                        </script>
+                    -->
+                        <!-- bouton inscription-->
+<!--
+                        <input class="g-recaptcha"
+                        data-sitekey="{{config('services.recaptcha.site_key')}}"
+                        data-callback='onSubmit'
+                        data-action='register'
+                        id="bouton_inscription"
+                        type="submit"
+                        value="inscription">
+-->
+
+                        <div id="captcha">
+
+                            <!-- Captcha -->
+                            {!!htmlFormSnippet()!!}
+
+                            <!-- Si une erreur  à été repérer lors de la validation du captcha -->
+                            @if($errors->has('g-recaptcha-response'))
+
+                            <div>
+                                <small>
+                                    {{$errors->first('g-recaptcha-response')}}
+                                </small>
+                            </div>
+
+                            @endif
+
+                        </div>
+
+                        <input
+                        id="bouton_inscription"
+                        type="submit"
+                        value="inscription">
+
 
                     </form>
 
 
-                    <!-- paragraphe -->
-                    <p id="p_inscription_1">
 
-                        Je comfirme avoir plus de 18 ans et accepte
-                        <a href="studiolab_accueil_v2.css"> les conditions générales de service
-                        StudiolabCloud</a>
 
-                    </p>
 
+<!--
+                    <div class="form-group">
+                        {!! NoCaptcha::display() !!}
+                        @if ($errors->has('g-recaptcha-response'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                -->
                 </div>
 
             </div>
@@ -381,6 +453,24 @@
 
     </footer>
 
+    <!-- Pour charger le script JavaScript reCAPTCHA -->
+<!--
+    {!! NoCaptcha::renderJs() !!}
+-->
+
+    <!-- Script JavaScript pour gérer le reCAPTCHA v3 -->
+    <!--
+    <script>
+        document.getElementById('bouton_inscription').addEventListener('click', function(event) {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {action: 'register'}).then(function(token) {
+                    document.getElementById('g-recaptcha-response').value = token;
+                    document.getElementById('formulaire_inscription').submit();
+                });
+            });
+        });
+    </script>
+-->
 </body>
 
-</body>
+</html>

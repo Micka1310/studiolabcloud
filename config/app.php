@@ -123,4 +123,17 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    /* Pour le captcha dans la page de connexion/inscription */
+    /*
+    'providers' =>
+    [
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+    ],
+
+    'aliases' =>
+    [
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+    ],
+*/
 ];

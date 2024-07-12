@@ -19,7 +19,7 @@ class authentification extends Controller
             // Si un utilisateur est déja connecter et que l'on force
             // à revenir dans la page de connexion sans se déconnecter,
             // on est rediriger vers la page d'accueil
-            return redirect(route('home'));
+            return redirect('home');
         }
 
         return view('studiolab_connexion_inscription_v2');
