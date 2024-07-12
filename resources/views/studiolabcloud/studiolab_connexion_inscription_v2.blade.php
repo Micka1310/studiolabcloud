@@ -146,7 +146,7 @@
                         </div>
 
                         <!-- lien -->
-                        <a id="connexion_lien" href="studiolab_accueil_v2.css">Identifiant ou mot de passe oublié ?</a>
+                        <a id="connexion_lien" href="{{route('password.request')}}">Identifiant ou mot de passe oublié ?</a>
 
                     </div>
 

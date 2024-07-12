@@ -27,6 +27,7 @@ Route::middleware('guest')->group(function ()
                 ->name('login.post');
 
 
+
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');
 
@@ -52,6 +53,8 @@ Route::middleware('auth')->group(function ()
     Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
                 ->middleware('throttle:6,1')
                 ->name('verification.send');
+
+
 
     Route::get('confirm-password', [ConfirmablePasswordController::class, 'show'])
                 ->name('password.confirm');
