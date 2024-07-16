@@ -9,17 +9,35 @@ use App\Http\Controllers\accueil;
 
 
 // Route menant à l'accueil
+Route::get('/tableau_bord_principal', function ()
+{
+    return view('studiolabcloud/tableau_bord_principal');
+    //return view('studiolabcloud/welcome');
+})->name('tableau_bord_principal');
+
 Route::get('/', function ()
 {
     return view('studiolabcloud/studiolab_accueil_v3');
     //return view('studiolabcloud/welcome');
 });
 
-// Route menant vers le tableau de bord
+// Route depuis le tableau de bord
 Route::get('/tableau_bord_client', function()
 {
     return view('studiolabcloud/tableau_bord_client');
 })->name('tableau_bord_client');
+
+Route::get('/tableau_bord_paiement', function()
+{
+    return view('studiolabcloud/tableau_bord_paiement');
+})->name('tableau_bord_paiement');
+
+Route::get('/tableau_bord_mail', function()
+{
+    return view('studiolabcloud/tableau_bord_mail');
+})->name('tableau_bord_mail');
+
+
 
 /*
 Route::get('/accueil', [accueil::class, 'accueil'])->name('accueil');

@@ -22,8 +22,12 @@
     <title>Studiolab cloud | tableau de bord | nouveaux clients</title>
 
     <!-- Lien CSS et JavaScript -->
+    <!--
     <link href="tableau_bord_principal.css" rel="stylesheet" type="text/css" media="">
     <script src="prosit2js/prosit2.js"></script>
+    -->
+
+    @vite(['resources/css/tableau_bord_principal.css'])
 
 </head>
 
@@ -38,29 +42,29 @@
 
                 <div class="center">
                     <!-- image de logo ici -->
-                    <img id="gauche_img_1" height="70px" src="Logo-Studiolab CLOUD_White.png" alt="image de profil"/>
+                    <img id="gauche_img_1" height="70px" src="{{ asset('build/images/tableau_bord/Logo-Studiolab CLOUD_White.png') }}" alt="image de profil"/>
                 </div>
 
                 <div id="gauche_droite">
 
-                    <img id="gauche_img_2" height="30px" src="rectangle.png" alt="image de profil"/>
+                    <img id="gauche_img_2" height="30px" src="{{ asset('build/images/tableau_bord/rectangle.png') }}" alt="image de profil"/>
 
                     <!-- lien qui charge la page du client dans l'iframe -->
-                    <a id="gauche_a_1" href="tableau_bord_client.html" target="iframe">Tableau de bord</a>
+                    <a id="gauche_a_1" href="{{route('tableau_bord_client')}}" target="iframe">Tableau de bord</a>
 
                     <br>
 
 
-                    <img id="gauche_img_3" height="30px" src="img_paiement.png" alt="image de profil"/>
+                    <img id="gauche_img_3" height="30px" src="{{ asset('build/images/tableau_bord/img_paiement.png') }}" alt="image de profil"/>
 
                     <!-- lien qui charge la page de paiement dans l'iframe -->
-                    <a id="gauche_a_2" href="tableau_bord_paiement.html" target="iframe">Moyen de paiement</a>
+                    <a id="gauche_a_2" href="{{route('tableau_bord_paiement')}}" target="iframe">Moyen de paiement</a>
 
                     <br>
 
 
-                    <img id="gauche_img_4" height="30px" src="img_gerer_compte.png" alt="image de profil"/>
-                    <a id="" href="" target="iframe">Gérer mon compte</a>
+                    <img id="gauche_img_4" height="30px" src="{{ asset('build/images/tableau_bord/img_gerer_compte.png') }}" alt="image de profil"/>
+                    <span>Gérer mon compte</span>
 
                     <br>
                     <br>
@@ -68,28 +72,28 @@
 
                     <h5 id="gauche_h_1">Raccourcis</h5>
 
-                    <img id="gauche_img_5" height="30px" src="test_patate.jpeg" alt="image de profil"/>
+                    <img id="gauche_img_5" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
                     <span>Gestion des services</span>
 
                     <br>
 
-                    <img id="gauche_img_6" height="30px" src="test_patate.jpeg" alt="image de profil"/>
+                    <img id="gauche_img_6" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
                     <span>Factures</span>
 
                     <br>
 
-                    <img id="gauche_img_7" height="30px" src="test_patate.jpeg" alt="image de profil"/>
+                    <img id="gauche_img_7" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
                     <span>Catalogue de produit</span>
 
                     <br>
 
                     <!-- lien qui charge la page de la boite mail -->
-                    <img id="gauche_img_8" height="30px" src="test_patate.jpeg" alt="image de profil"/>
-                    <a id="gauche_a_8" href="tableau_bord_mail.html">E-mail de service</a>
+                    <img id="gauche_img_8" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
+                    <a id="gauche_a_8" href="{{route('tableau_bord_mail')}}" target="iframe">E-mail de service</a>
 
                     <br>
 
-                    <img id="gauche_img_9" height="30px" src="test_patate.jpeg" alt="image de profil"/>
+                    <img id="gauche_img_9" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
                     <span>Gestion des contacts</span>
 
                     <br>
@@ -102,7 +106,7 @@
                     </form>
 
                     <!-- lien de déconnexion -->
-                    <img id="gauche_img_10" height="30px" src="test_patate.jpeg" alt="image de profil"/>
+                    <img id="gauche_img_10" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de profil"/>
                     <a id="gauche_span_9" method="POST" href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Me déconnecter</a>
 

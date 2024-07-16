@@ -22,8 +22,12 @@
     <title>Studiolab cloud | tableau de bord | clients</title>
 
     <!-- Lien CSS et JavaScript -->
+    <!--
     <link href="tableau_bord_client.css" rel="stylesheet" type="text/css" media="">
     <script src="prosit2js/prosit2.js"></script>
+    -->
+
+    @vite(['resources/css/tableau_bord_client.css'])
 
 </head>
 
@@ -33,7 +37,7 @@
     <header>
 
         <!-- image de profil ici -->
-        <img id="header_img_1" height="80px" src="img_profil.png" alt="image de profil"/>
+        <img id="header_img_1" height="80px" src="{{ asset('build/images/tableau_bord/img_profil.png') }}" alt="image de profil"/>
 
         <br>
         <br>
@@ -44,7 +48,7 @@
 
             <!-- barre de recherche -->
 
-            <input id="header_bouton_de_recherche" type="image" height="30px" src="test_patate.jpeg" alt="image de téléphone fixe">
+            <input id="header_bouton_de_recherche" type="image" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de téléphone fixe">
 
             <input id="header_barre_recherche" type="text" placeholder="Rechercher">
 
@@ -130,7 +134,7 @@
                             <form class="recapitulatif_bouton_flex" action="http://localhost/prosit2v3.html">
 
                                 <!-- image de flèche sur la gauche du bouton -->
-                                <img id="recapitulatif_img_1" height="25px" src="test_patate.jpeg" alt="image de flèche"/>
+                                <img id="recapitulatif_img_1" height="25px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de flèche"/>
                                 <input id="recapitulatif_bouton_1" type="submit" value="Voir mes commandes">
 
                             </form>
@@ -155,7 +159,7 @@
                             <form class="recapitulatif_bouton_flex" action="http://localhost/prosit2v3.html">
 
                                 <!-- image de flèche sur la droite du bouton -->
-                                <img id="recapitulatif_img_2" height="25px" src="test_patate.jpeg" alt="image de flèche"/>
+                                <img id="recapitulatif_img_2" height="25px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de flèche"/>
                                 <input id="recapitulatif_bouton_2" type="submit" value="Le mois dernier">
 
                             </form>
@@ -164,7 +168,7 @@
                         <br>
 
                         <span id="recapitulatif_p_3"><b>630,78 €</b></span>
-                        <img id="recapitulatif_img_3" height="25px" src="test_patate.jpeg" alt="image de coche"/>
+                        <img id="recapitulatif_img_3" height="25px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de coche"/>
                         <span id="recapitulatif_p_4">Payé</span>
 
                         <br>
@@ -175,7 +179,7 @@
                             <form class="recapitulatif_bouton_flex" action="http://localhost/prosit2v3.html">
 
                                 <!-- image de flèche sur la gauche du bouton -->
-                                <img id="recapitulatif_img_4" height="25px" src="test_patate.jpeg" alt="image de flèche"/>
+                                <img id="recapitulatif_img_4" height="25px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de flèche"/>
                                 <input id="recapitulatif_bouton_3" type="submit" value="Voir les factures">
 
                             </form>
@@ -189,7 +193,7 @@
                 <!-- 3ème service -->
                 <div id="recapitulatif_forme_invisible_3">
 
-                    <img id="recapitulatif_img_5" height="150px" src="test_patate.jpeg" alt="image de décoration"/>
+                    <img id="recapitulatif_img_5" height="150px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de décoration"/>
 
                     <h4 id="recapitulatif_h_3">Besoin d'aide ?</h4>
 
@@ -202,7 +206,7 @@
 
                     <br>
 
-                    <img id="recapitulatif_img_6" height="30px" src="test_patate.jpeg" alt="image de flèche"/>
+                    <img id="recapitulatif_img_6" height="30px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de flèche"/>
 
                     <p id="recapitulatif_p_6">
                         Comprendre et utiliser vos services StudiolabCloud
@@ -268,12 +272,12 @@
                     <div id="v_service_forme_8">
 
                         <span id="v_service_p_4">53.92.355.47</span>
-                        <img id="v_service_img_1" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_1" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
 
-                    <img id="v_service_img_2" height="20px" src="test_patate.jpeg" alt="image de points de suspension"/>
+                    <img id="v_service_img_2" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de points de suspension"/>
 
 
                     <h4 id="v_service_h_5">IPv6</h4>
@@ -281,7 +285,7 @@
                     <div id="v_service_forme_9">
 
                         <span id="v_service_p_5">2001:41d0:305:2100:0:0:0:0:9544</span>
-                        <img id="v_service_img_3" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_3" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
@@ -295,7 +299,7 @@
 
                     </div>
 
-                    <img id="v_service_img_4" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                    <img id="v_service_img_4" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     <br>
 
@@ -339,12 +343,12 @@
                     <div id="v_service_forme_8">
 
                         <span id="v_service_p_4">53.92.355.47</span>
-                        <img id="v_service_img_1" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_1" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
 
-                    <img id="v_service_img_2" height="20px" src="test_patate.jpeg" alt="image de points de suspension"/>
+                    <img id="v_service_img_2" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de points de suspension"/>
 
 
                     <h4 id="v_service_h_5">IPv6</h4>
@@ -352,7 +356,7 @@
                     <div id="v_service_forme_9">
 
                         <span id="v_service_p_5">2001:41d0:305:2100:0:0:0:0:9544</span>
-                        <img id="v_service_img_3" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_3" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
@@ -366,7 +370,7 @@
 
                     </div>
 
-                    <img id="v_service_img_4" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                    <img id="v_service_img_4" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     <br>
 
@@ -410,12 +414,12 @@
                     <div id="v_service_forme_8">
 
                         <span id="v_service_p_4">53.92.355.47</span>
-                        <img id="v_service_img_1" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_1" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
 
-                    <img id="v_service_img_2" height="20px" src="test_patate.jpeg" alt="image de points de suspension"/>
+                    <img id="v_service_img_2" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de points de suspension"/>
 
 
                     <h4 id="v_service_h_5">IPv6</h4>
@@ -423,7 +427,7 @@
                     <div id="v_service_forme_9">
 
                         <span id="v_service_p_5">2001:41d0:305:2100:0:0:0:0:9544</span>
-                        <img id="v_service_img_3" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                        <img id="v_service_img_3" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     </div>
 
@@ -437,7 +441,7 @@
 
                     </div>
 
-                    <img id="v_service_img_4" height="20px" src="test_patate.jpeg" alt="image de copier-coller"/>
+                    <img id="v_service_img_4" height="20px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image de copier-coller"/>
 
                     <br>
 
@@ -484,7 +488,7 @@
                         <br>
 
                         <!-- image -->
-                        <img id="service_img_1" height="100px" src="test_patate.jpeg" alt="image_non attribué"/>
+                        <img id="service_img_1" height="100px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image_non attribué"/>
 
                         <h4>Machines</h4>
                         <h4 id="service_h_2">virtuelles</h4>
@@ -515,7 +519,7 @@
                         <br>
 
                         <!-- image -->
-                        <img id="service_img_2" height="100px" src="test_patate.jpeg" alt="image_non attribué"/>
+                        <img id="service_img_2" height="100px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image_non attribué"/>
 
                         <h5>Hébergement</h5>
                         <h5 id="service_h_3">Cloud</h5>
@@ -546,7 +550,7 @@
                         <br>
 
                         <!-- image -->
-                        <img id="service_img_3" height="100px" src="test_patate.jpeg" alt="image_non attribué"/>
+                        <img id="service_img_3" height="100px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image_non attribué"/>
 
                         <h5>Télécom</h5>
 
@@ -578,7 +582,7 @@
                         <br>
 
                         <!-- image -->
-                        <img id="service_img_2" height="100px" src="test_patate.jpeg" alt="image_non attribué"/>
+                        <img id="service_img_2" height="100px" src="{{ asset('build/images/tableau_bord/test_patate.jpeg') }}" alt="image_non attribué"/>
 
                         <h5>Entreprise</h5>
 
