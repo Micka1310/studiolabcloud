@@ -9,19 +9,28 @@ use App\Http\Controllers\accueil;
 
 
 // Route menant à l'accueil
+Route::get('/', function ()
+{
+    return view('studiolabcloud/studiolab_accueil_v3');
+    //return view('studiolabcloud/welcome');
+})->name('studiolabcloud_accueil');
+
+
+// Route menant à la page virtuelle
+Route::get('/machines_virtuelles', function ()
+{
+    return view('studiolabcloud/studiolab_machine_virtuelle_v2');
+    //return view('studiolabcloud/welcome');
+})->name('machine_virtuelle');
+
+
+// Route depuis le tableau de bord
 Route::get('/tableau_bord_principal', function ()
 {
     return view('studiolabcloud/tableau_bord_principal');
     //return view('studiolabcloud/welcome');
 })->name('tableau_bord_principal');
 
-Route::get('/', function ()
-{
-    return view('studiolabcloud/studiolab_accueil_v3');
-    //return view('studiolabcloud/welcome');
-});
-
-// Route depuis le tableau de bord
 Route::get('/tableau_bord_client', function()
 {
     return view('studiolabcloud/tableau_bord_client');

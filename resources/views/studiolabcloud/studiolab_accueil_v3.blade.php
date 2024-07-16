@@ -255,7 +255,7 @@
                                 <a id="header_lien_4" href="">Contact commercial</a>
                                 <a id="header_lien_3" href="">Webmail</a>
                                 <a id="header_lien_2" href="">Assistance</a>
-                                <a id="header_lien_1" href="">Actualités</a>
+                                <a id="header_lien_1" href="{{route('studiolabcloud_accueil')}}">Actualités</a>
 
                                 <!-- barre et bouton de recherche ici -->
                                 <input id="header_bouton_de_recherche_1" type="image" height="20px" src="{{ asset('build/images/accueil/loupe.png') }}" alt="image de téléphone fixe">
@@ -304,11 +304,11 @@
                             <!-- Pour la barre de recherche -->
                             <form action="/rechercher" method="get">
 
-                                <a id="header_lien_17" href="">Mon compte client</a>
+                                <a id="header_lien_17" href="{{route('login.post')}}">Mon compte client</a>
                                 <a id="header_lien_16" href="">Contact commercial</a>
                                 <a id="header_lien_15" href="">Webmail</a>
                                 <a id="header_lien_14" href="">Assistance</a>
-                                <a id="header_lien_13" href="">Actualités</a>
+                                <a id="header_lien_13" href="{{route('studiolabcloud_accueil')}}">Actualités</a>
 
                             </form>
 
@@ -345,7 +345,7 @@
                             <!-- Pour la barre de recherche -->
                             <form action="/rechercher" method="get">
 
-                                <a id="header_lien_17" href="">Mon compte client</a>
+                                <a id="header_lien_17" href="{{route('login.post')}}">Mon compte client</a>
                                 <a id="header_lien_16" href="">Contact commercial</a>
 
                             </form>
@@ -356,7 +356,7 @@
 
                             <a id="header_lien_15" href="">Webmail</a>
                             <a id="header_lien_14" href="">Assistance</a>
-                            <a id="header_lien_13" href="">Actualités</a>
+                            <a id="header_lien_13" href="{{route('studiolabcloud_accueil')}}">Actualités</a>
 
                         </div>
 
@@ -381,7 +381,7 @@
 
                         <div id="header_lien_aligne_12">
 
-                            <a id="header_lien_12" href="">Machines virtuelles</a>
+                            <a id="header_lien_12" href="{{route('machine_virtuelle')}}">Machines virtuelles</a>
 
                             <!-- Pour créer la forme qui servira comme un sélécteur de lien -->
                             <div id="header_forme_partie_9"></div>
@@ -455,7 +455,7 @@
 
                         <div id="header_lien_aligne_19">
 
-                            <a id="header_lien_12" href="">Machines virtuelles</a>
+                            <a id="header_lien_12" href="{{route('machine_virtuelle')}}">Machines virtuelles</a>
 
                             <!-- Pour créer la forme qui servira comme un sélécteur de lien -->
                             <div id="header_forme_partie_9"></div>
